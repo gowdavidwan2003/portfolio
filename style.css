@@ -477,3 +477,96 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 18px 50px;
+    height: 50vh;
+  }
+
+  .landing {
+    flex-direction: column;
+    height: 70vh;
+  }
+
+  .cards, .portfolio-cards {
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .skill-card, .portfolio-card {
+    height: 40vw;
+    width: 80vw;
+  }
+
+  .skill-card img, .portfolio-card img {
+    height: 20vw;
+    width: 40vw;
+  }
+
+  .exp {
+    width: 80vw;
+    margin-left: 10vh;
+  }
+
+  .portfolio-card img {
+    height: 30vw;
+    width: 80vw;
+  }
+
+  .portfolio-card .overlay {
+    height: 30vw;
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 24px 75px;
+    height: 70vh;
+  }
+
+  .landing {
+    flex-direction: row;
+    height: 80vh;
+  }
+
+  .cards, .portfolio-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5vh;
+  }
+
+  .skill-card, .portfolio-card {
+    height: 30vw;
+    width: 45vw;
+  }
+
+  .skill-card img, .portfolio-card img {
+    height: 15vw;
+    width: 22.5vw;
+  }
+
+  .exp {
+    width: 60vw;
+    margin-left: 15vh;
+  }
+
+  .portfolio-card img {
+    height: 30vw;
+    width: 45vw;
+  }
+
+  .portfolio-card .overlay {
+    height: 30vw;
+    width: 45vw;
+  }
+}
