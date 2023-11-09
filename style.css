@@ -477,3 +477,68 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 18px 50px;
+  }
+
+  .landing {
+    flex-direction: column;
+  }
+
+  .cards, .portfolio-cards {
+    flex-direction: column;
+  }
+
+  .skill-card, .portfolio-card {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  .skill-card img, .portfolio-card img {
+    height: 20vw;
+    width: 20vw;
+  }
+
+  .exp {
+    width: 70vw;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 24px 75px;
+  }
+
+  .landing {
+    flex-direction: row;
+  }
+
+  .cards, .portfolio-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .skill-card, .portfolio-card {
+    height: 30vw;
+    width: 30vw;
+  }
+
+  .skill-card img, .portfolio-card img {
+    height: 15vw;
+    width: 15vw;
+  }
+
+  .exp {
+    width: 60vw;
+  }
+}
