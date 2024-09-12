@@ -411,22 +411,32 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const dobElement = document.getElementById('age');
-        const dob = new Date(dobElement.getAttribute('data-dob'));
-        const today = new Date();
-
-        let age = today.getFullYear() - dob.getFullYear();
-        const monthDifference = today.getMonth() - dob.getMonth();
-        const dayDifference = today.getDate() - dob.getDate();
-
-        if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
-            age--;
-        }
-
-        dobElement.textContent = age;
+    function calculateAge(dob) {
+      const birthDate = new Date(dob);
+      const today = new Date();
+  
+      let years = today.getFullYear() - birthDate.getFullYear();
+      let months = today.getMonth() - birthDate.getMonth();
+      let days = today.getDate() - birthDate.getDate();
+  
+      if (days < 0) {
+        months--;
+        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+      }
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+  
+      return `${years} years ${months} months ${days} days`;
+    }
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const dob = '2003-08-02'; // Replace with your date of birth
+      const ageElement = document.getElementById('age');
+      ageElement.textContent = calculateAge(dob);
     });
-</script>
+  </script>
 
 </body>
 
